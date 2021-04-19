@@ -21,9 +21,23 @@ find_package(ament_cmake REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+
+set(msg_files
+  "msg/MotorsControl.msg"
+  "msg/ImuOutput.msg"
+  "msg/MotorsControllerOutput.msg"
+)
+
+set(srv_files
+  "srv/GetMinirysGlobalLocalization.srv"
+)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "srv/GetMinirysGlobalLocalization.srv"
+  ${msg_files}
+  ${srv_files}
+  DEPENDENCIES std_msgs sensor_msgs
 )
 
 if(BUILD_TESTING)
@@ -36,5 +50,7 @@ if(BUILD_TESTING)
   #set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+ament_export_dependencies(rosidl_default_runtime)
 
 ament_package()
