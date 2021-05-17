@@ -1,3 +1,5 @@
 std_msgs/Header header
 float64 left_wheel_speed
 float64 right_wheel_speed
+minirys_interfaces/MotorStatus status_left
+minirys_interfaces/MotorStatus status_right
