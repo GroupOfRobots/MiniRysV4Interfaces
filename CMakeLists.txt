@@ -24,12 +24,15 @@ find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
 
 set(msg_files
   "msg/MotorsControl.msg"
   "msg/ImuOutput.msg"
+  "msg/TofOutput.msg"
   "msg/MotorStatus.msg"
   "msg/MotorsControllerOutput.msg"
+  "msg/MinirysOutput.msg"
 )
 
 set(srv_files
@@ -40,7 +43,7 @@ set(srv_files
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
   ${srv_files}
-  DEPENDENCIES std_msgs sensor_msgs
+  DEPENDENCIES std_msgs sensor_msgs nav_msgs
 )
 
 if(BUILD_TESTING)

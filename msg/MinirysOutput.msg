@@ -1,0 +1,7 @@
+std_msgs/Header header
+minirys_interfaces/MotorsControllerOutput motors
+minirys_interfaces/ImuOutput imu
+minirys_interfaces/TofOutput tof
+sensor_msgs/Temperature temperature
+sensor_msgs/BatteryState battery
+nav_msgs/Odometry odometry
