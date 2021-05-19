@@ -33,6 +33,7 @@ set(msg_files
   "msg/MotorStatus.msg"
   "msg/MotorsControllerOutput.msg"
   "msg/MinirysOutput.msg"
+  "msg/MinirysInput.msg"
 )
 
 set(srv_files

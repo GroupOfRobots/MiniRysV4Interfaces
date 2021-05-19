@@ -1,5 +1,4 @@
 std_msgs/Header header
-float64 forward_speed
-float64 rotation_speed
-bool enable_balancing
-bool print_status
+float64 forward_speed 0.0
+float64 rotation_speed 0.0
+bool enable_balancing False
