@@ -1,2 +1,2 @@
 std_msgs/Header header
-sensor_msgs/Range[6] tof
+sensor_msgs/Range[8] sensor

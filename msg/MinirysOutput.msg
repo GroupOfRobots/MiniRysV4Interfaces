@@ -5,3 +5,4 @@ minirys_interfaces/TofOutput tof
 sensor_msgs/Temperature temperature
 sensor_msgs/BatteryState battery
 nav_msgs/Odometry odometry
+bool emergency_stop False
